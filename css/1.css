@@ -73,3 +73,29 @@ header {
     margin-top:.22rem;
     color:#ED3A3A
 }
+.pic{
+    background: rgb(7, 223, 61);
+}
+.book{
+    display: flex;
+    margin-bottom: .1rem;
+}
+.book img{
+    width:.29rem;
+    height: .35rem;
+    margin-left:.19rem;
+    margin-right:.2rem
+}
+.book .zi{
+    font-size: .26rem;
+}
+.line{
+    width: 100%;
+    height: .01rem;
+    background: silver;
+}
+.tu{
+    float: left;
+    padding-left: 1rem;
+
+}
