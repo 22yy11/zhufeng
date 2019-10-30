@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/1.css">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+
+<body>
+    <!-- header html5新增标签 头部header 底部 footer main主体
+    设计稿的尺寸
++iphone5  320*568  DPR：2.0 尺寸 640*1136
++iphone6  375*667  DPR: 2.0 尺寸 750*1334 常用
++iphone6p 414*736  DPR: 3.0 尺寸 1242*2208 
+-->
+    <header>
+        <h1 class="logo">
+            <a href="#"></a>
+        </h1>
+        <div class="menu">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+        </div>
+    </header>
+    <!-- swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="kengcheng1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="banner2.jpg" alt=""></div>
+
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- 如果需要导航按钮 -->
+        <!-- <div class="swiper-button-prev"></div> -->
+        <!-- <div class="swiper-button-next"></div> -->
+
+        <!-- 如果需要滚动条 -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+    <!-- main -->
+    <main class="content">
+        <section class="item">
+            <!-- <div class="pic"> -->
+                    <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=676304001,1029860875&fm=11&gp=0.jpg" alt="">
+            <!-- </div> -->
+            <div class="txt">
+                <p class="dec"> vue.js从理论精讲到项目实战课程</p>
+                <p class="price">$599.00元</p>
+            </div>
+        </section>
+        <section class="item">
+                <!-- <div class="pic"> -->
+                        <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2711862120,1073002947&fm=26&gp=0.jpg" alt="">
+                <!-- </div> -->
+                <div class="txt">
+                    <p class="dec"> vue.js从理论精讲到项目实战课程</p>
+                    <p class="price">$599.00元</p>
+                </div>
+            </section>
+            <section class="item">
+                    <!-- <div class="pic"> -->
+                            <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=676304001,1029860875&fm=11&gp=0.jpg" alt="">
+                    <!-- </div> -->
+                    <div class="txt">
+                        <p class="dec"> vue.js从理论精讲到项目实战课程</p>
+                        <p class="price">$599.00元</p>
+                    </div>
+                </section>
+    </main>
+    <!--  -->
+    <script src="js/swiper.min.js"></script>
+    <!-- 引入动态判断rem的脚本 -->
+    <script type="text/javascript">
+        // 动态判断rem的大小 desw=640 设计稿的宽度尺寸
+        //  
+        function refreshRem() {
+            var desW = 750,
+                winW = document.documentElement.clientWidth,
+                ratio = winW / desW;
+            document.documentElement.style.fontSize = ratio * 100 + 'px';
+        }
+        refreshRem();
+        window.addEventListener('resize', refreshRem);
+    </script>
+
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            //   direction: 'vertical', // 垂直切换选项
+             // 循环模式选项
+            autoplay: {
+                // 用户操作之后，轮播效果，暂停true，false开启  自动切换，两秒切一次  disableoninteraction 用户操作之后自己播放
+                // 
+                delay: 2000,
+                // stopOnLastSlide: false,
+                disableOnInteraction: false,
+            },
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            //   // 如果需要前进后退按钮
+            //   navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            //   },
+
+            //   // 如果需要滚动条
+            //   scrollbar: {
+            //     el: '.swiper-scrollbar',
+            //   },
+        })
+    </script>
+</body>
+
+</html>
